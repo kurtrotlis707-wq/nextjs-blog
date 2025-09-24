@@ -2,7 +2,7 @@
 import Layout from '../../components/layout';
 
 //get post data and markers
-import { getAllPostIds, getPostData } from '../../posts';
+import { getPostData } from '../../posts';
 // Add this import
 // you can use head
 import Head from 'next/head';
