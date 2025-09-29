@@ -5,6 +5,7 @@ import Layout, { siteTitle } from '../components/layout';
 // Import utility styles for consistent styling
 import utilStyles from '../pages/styles/utils.module.css';
 // Import data from posts
+import { getSortedPostsData } from '../lib/posts';
 //Abillity to link pages
 import Link from 'next/link';
 //ability to call date component
@@ -13,6 +14,7 @@ import Date from '../components/date';
 //display post info
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
+  console.log(allPostsData);
   return {
     props: {
       allPostsData,
@@ -25,7 +27,7 @@ export async function getStaticProps() {
  * This is the default export for the root route ('/') in Next.js
  */
 
-export default function Home() {
+export default function Home({ allPostsData }) {
   return (
     // Use the Layout component with 'home' prop for home page styling
     <Layout home>
