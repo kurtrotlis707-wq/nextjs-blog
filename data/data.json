@@ -1,0 +1,23 @@
+[
+    {
+        "title": "a new book",
+        "date": "2025-09-10",
+        "color": "blue",
+        "id": "5",
+        "contentHTML": "content"
+    },
+    {
+        "title": "a new look",
+        "date": "2022-06-10",
+        "color": "blueish",
+        "id": "6",
+        "contentHTML": "content here"
+    },
+    {
+        "title": "a new cook",
+        "date": "2020-04-10",
+        "color": "blueless",
+        "id": "7",
+        "contentHTML": "content here please"
+    }
+]
