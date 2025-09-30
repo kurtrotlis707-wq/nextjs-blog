@@ -2,14 +2,14 @@
 import Layout from '../../components/layout';
 
 //get post data and markers
-import { getPostData } from '../../posts';
+import { getPostData } from '../../lib/posts-json';
 // Add this import
 // you can use head
 import Head from 'next/head';
 // you will be able to use tyhe date component
 import Date from '../../components/date';
 // css for your page
-import utilStyles from '../../styles/utils.module.css';
+import utilStyles from '../styles/utils.module.css';
 //display post data
 export default function Post({ postData }) {
     return (
