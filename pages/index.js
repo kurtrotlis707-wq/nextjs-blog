@@ -5,15 +5,16 @@ import Layout, { siteTitle } from '../components/layout';
 // Import utility styles for consistent styling
 import utilStyles from '../pages/styles/utils.module.css';
 // Import data from posts
-import { getSortedPostsData } from '../lib/posts-json';
+import { getSortedPostsData } from '../lib/posts-firebase';
 //Abillity to link pages
 import Link from 'next/link';
 //ability to call date component
 import Date from '../components/date';
+import { db } from '../lib/firebase';
 
 //display post info
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = await getSortedPostsData();
   console.log(allPostsData);
   return {
     props: {
