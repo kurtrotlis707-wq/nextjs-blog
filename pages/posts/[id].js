@@ -11,6 +11,10 @@ import Date from '../../components/date';
 // css for your page
 import utilStyles from '../styles/utils.module.css';
 //display post data
+const paths = await getAllPostIds();
+
+
+
 export default function Post({ postData }) {
     return (
         <Layout>
