@@ -2,7 +2,7 @@
 import Layout from '../../components/layout';
 
 //get post data and markers
-import { getPostData } from '../../lib/posts-json';
+import { getPostData, getAllPostIds } from '../../lib/posts-json';
 // Add this import
 // you can use head
 import Head from 'next/head';
@@ -11,7 +11,7 @@ import Date from '../../components/date';
 // css for your page
 import utilStyles from '../styles/utils.module.css';
 //display post data
-const paths = await getAllPostIds();
+
 
 
 
@@ -33,20 +33,11 @@ export default function Post({ postData }) {
 }
 // allows for page routing
 export async function getStaticPaths() {
-    const paths = getAllPostIds();
-    return
-    [
-        {
-            params: {
-                // Statically Generates /posts/a/b/c
-                id: ['a', 'b', 'c'],
-            },
-        },
-        //...
-    ];
-    {
+    const paths = await getAllPostIds();
+    console.log(paths);
+    return {
         paths,
-            fallback.false
+        fallback: false
     }
 }
 //pull data from the sever when needed
@@ -59,17 +50,4 @@ export async function getStaticProps({ params }) {
             postData,
         },
     };
-}
-export async function getAllPostIds() {
-    // Instead of the file system,
-    // fetch post data from an external API endpoint
-    const res = await fetch('..');
-    const posts = await res.json();
-    return posts.map((post) => {
-        return {
-            params: {
-                id: post.id,
-            },
-        };
-    });
 }
