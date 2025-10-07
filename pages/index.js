@@ -10,7 +10,7 @@ import { getSortedPostsData } from '../lib/posts-firebase';
 import Link from 'next/link';
 //ability to call date component
 import Date from '../components/date';
-import { db } from '../lib/firebase';
+
 
 //display post info
 export async function getStaticProps() {

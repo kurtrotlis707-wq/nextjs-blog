@@ -11,7 +11,7 @@ import Date from '../../components/date';
 // css for your page
 import utilStyles from '../styles/utils.module.css';
 //display post data
-import { db } from '../../lib/firebase';
+
 
 
 
