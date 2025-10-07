@@ -2,7 +2,7 @@
 import Layout from '../../components/layout';
 
 //get post data and markers
-import { getPostData, getAllPostIds } from '../../lib/posts-json';
+import { getPostData, getAllPostIds } from '../../lib/posts-firebase';
 // Add this import
 // you can use head
 import Head from 'next/head';
@@ -11,7 +11,7 @@ import Date from '../../components/date';
 // css for your page
 import utilStyles from '../styles/utils.module.css';
 //display post data
-
+import { db } from '../../lib/firebase';
 
 
 
